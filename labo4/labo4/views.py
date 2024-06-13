@@ -54,7 +54,7 @@ def reinitialisationroute(request):
 
 @csrf_exempt
 def etatweb(request):
-    if request.method == "GET":
+    if request.method == "POST":
         data = request.POST
         
         zone1 = Zone.objects.get(titre="Zone 1")
