@@ -57,10 +57,10 @@ def etatweb(request):
     if request.method == "GET":
         data = request.POST
         
-        zone1 = Zone.objects.get(nom="Zone 1")
-        zone2 = Zone.objects.get(nom="Zone 2")
-        zone3 = Zone.objects.get(nom="Zone 3")
-        zone4 = Zone.objects.get(nom="Zone 4")
+        zone1 = Zone.objects.get(titre="Zone 1")
+        zone2 = Zone.objects.get(titre="Zone 2")
+        zone3 = Zone.objects.get(titre="Zone 3")
+        zone4 = Zone.objects.get(titre="Zone 4")
         data = {
             "ok":"oui",
             "monalarme" : {

@@ -257,16 +257,16 @@ class MonSysteme:
             self.showA()
             self.ma_led.on()
             self.systemStatus = 1
-            zone1 = Zone.objects.get(nom='Zone 1')
+            zone1 = Zone.objects.get(titre='Zone 1')
             zone1.etat = 0
             zone1.save()
-            zone2 = Zone.objects.get(nom='Zone 2')
+            zone2 = Zone.objects.get(titre='Zone 2')
             zone2.etat = 0
             zone2.save()
-            zone3 = Zone.objects.get(nom='Zone 3')
+            zone3 = Zone.objects.get(titre='Zone 3')
             zone3.etat = 0
             zone3.save()
-            zone4 = Zone.objects.get(nom='Zone 4')
+            zone4 = Zone.objects.get(titre='Zone 4')
             zone4.etat = 0
             zone4.save()
             
@@ -277,25 +277,25 @@ class MonSysteme:
             if self.zone1.is_pressed:
                 self.show1()
                 self.ma_led.blink(on_time=0.4, off_time=0.4)
-                zone1 = Zone.objects.get(nom='Zone 1')
+                zone1 = Zone.objects.get(titre='Zone 1')
                 zone1.etat = 1
                 zone1.save()
             elif self.zone2.is_pressed:
                 self.show2()
                 self.ma_led.blink(on_time=0.4, off_time=0.4)
-                zone2 = Zone.objects.get(nom='Zone 2')
+                zone2 = Zone.objects.get(titre='Zone 2')
                 zone2.etat = 1
                 zone2.save()
             elif self.zone3.is_pressed:
                 self.show3()
                 self.ma_led.blink(on_time=0.4, off_time=0.4)
-                zone3 = Zone.objects.get(nom='Zone 3')
+                zone3 = Zone.objects.get(titre='Zone 3')
                 zone3.etat = 1
                 zone3.save()
             elif self.zone4.is_pressed:
                 self.show4()
                 self.ma_led.blink(on_time=0.2, off_time=0.2)
-                zone4 = Zone.objects.get(nom='Zone 4')
+                zone4 = Zone.objects.get(titre='Zone 4')
                 zone4.etat = 1
                 zone4.save()
 
