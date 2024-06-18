@@ -82,3 +82,16 @@ def etatweb(request):
     
         return JsonResponse(data,safe=False)
     
+@csrf_exempt
+def etatandroid(request):
+    if request.method == "POST":
+        data = request.POST
+        
+        zone1 = Zone.objects.get(titre="Zone 1")
+        zone2 = Zone.objects.get(titre="Zone 2")
+        zone3 = Zone.objects.get(titre="Zone 3")
+        zone4 = Zone.objects.get(titre="Zone 4")
+        data = f"monalarme--{alarme.systemStatus}__Zone1--{zone1.etat}__Zone2--{zone2.etat}__Zone3--{zone3.etat}__Zone4--{zone4.etat}"
+    
+        return HttpResponse(data)
+    

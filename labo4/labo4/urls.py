@@ -25,5 +25,6 @@ urlpatterns = [
     path('activationroute/',activationroute),
     path('desactivationroute/',desactivationroute),
     path("reinitialisationroute/",reinitialisationroute),
-    path("etatweb/",etatweb)
+    path("etatweb/",etatweb),
+    path("etatandroid/",etatandroid)
 ]
